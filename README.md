@@ -83,5 +83,7 @@ You should bew redirected to your IDP to login, and if login is successful, you 
 
 
 ## Notes
-This document assumes you are familiar with the basics of Qlik Sense Eterprise on Kubernetes.  See https://help.qlik.com/en-US/sense/April2019/Subsystems/PlanningQlikSenseDeployments/Content/Sense_Deployment/Deploying-Qlik-Sense-multi-cloud-Efe.htm for details.
+This document assumes you are familiar with the basics of Qlik Sense Enterprise on Kubernetes.  See https://help.qlik.com/en-US/sense/April2019/Subsystems/PlanningQlikSenseDeployments/Content/Sense_Deployment/Deploying-Qlik-Sense-multi-cloud-Efe.htm for details.
 
+
+This is the first release  - please provide feedback if you see issues in your environment.  
