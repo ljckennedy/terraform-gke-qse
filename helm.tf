@@ -73,34 +73,8 @@ resource "helm_release" "qseonk8s" {
   wait = false
 
   values = [
-  <<-EOF
-devMode:
- enabled: true
-
-global:
-  persistence:
-    storageClass: nfs
-
-
-engine:
- acceptEULA: "yes"
-
-identity-providers:
- secrets:
-   idpConfigs:
-     - discoveryUrl: "https://lkn.au.auth0.com/.well-known/openid-configuration"
-       clientId: "JhCoBKx4zjh5639fiF6mRuzIFKnzSWjp"
-       clientSecret: "rQvB8Yx-rNlAIIA4Wm241BTt2ZceBTWElXqm8A2o7SsGb2T6-ya_uKR71W_QFR4o"
-       realm: "Auth0"
-       hostname: "lkn.elastic.example"
-       #useClaimsFromIdToken: true   
-       claimsMapping:
-         client_id: [ "client_id", "azp" ]
-         groups: ["/https:~1~1qlik.com~1roles", "/https:~1~1qlik.com~1groups"]
-         sub: ["/https:~1~1qlik.com~1sub", "sub"]
-
-  EOF
-]
+    file("basic.yaml"),
+  ]
 
 }
 

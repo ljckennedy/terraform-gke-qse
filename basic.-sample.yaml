@@ -1,0 +1,24 @@
+devMode:
+ enabled: true
+
+global:
+  persistence:
+    storageClass: nfs
+
+
+engine:
+ acceptEULA: "yes"
+
+identity-providers:
+ secrets:
+   idpConfigs:
+     - discoveryUrl: "https://my-idp/.well-known/openid-configuration"
+       clientId: "myid"
+       clientSecret: "my-pass"
+       realm: "Auth0"
+       hostname: "lkn.elastic.example"
+       #useClaimsFromIdToken: true   
+       claimsMapping:
+         client_id: [ "client_id", "azp" ]
+         groups: ["/https:~1~1qlik.com~1roles", "/https:~1~1qlik.com~1groups"]
+         sub: ["/https:~1~1qlik.com~1sub", "sub"]
