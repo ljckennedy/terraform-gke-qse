@@ -27,7 +27,7 @@ region="us-central1"
 initial_node_count=2
 machine_type="n1-standard-2"
 cluster_zone="us-central1-a"
-cluster_name"terraform-qse-lkn-gke"
+cluster_name="terraform-qse-lkn-gke"
 project="terraform-qse-lkn"
 ```
 Rename basic-sample.yaml you basic.yaml  and edit to enter appropriate values for your identity provider.  Ensure the hostname set here matches what you will add to your hosts file/dns.
